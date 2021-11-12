@@ -13,3 +13,6 @@ jobs:
           cat /proc/sys/vm/unprivileged_userfaultfd
           sudo sh -c 'echo 1 > /proc/sys/vm/unprivileged_userfaultfd'
           cat /proc/sys/vm/unprivileged_userfaultfd
+          ls -lah
+          gcc userfaultfd_wp_demo.c -o wptest -lpthread -std=c11
+          ./wptest 1
